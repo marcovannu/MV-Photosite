@@ -218,7 +218,31 @@ header {
 	text-align: center;
 	padding: 10px;
 }
-.item img{max-width:100%; height: auto;}
+.item img{
+	max-width:100%;
+	height: auto;
+	@include aspect-ratio(800, 1200);
+	@include aspect-ratio(1200, 800);
+	@include aspect-ratio(1200, 1200);
+	@include aspect-ratio(1200, 464);
+
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  padding-bottom: ($height / $width) * 100%;
+  img,
+  video,
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
 
 @media only screen and (max-width: 600px) {
 .masonry {
