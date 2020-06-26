@@ -204,7 +204,7 @@ header {
 .content a {text-decoration: var(--color1); color: var(--color1);}
 .content img {float: left; margin: 60px; width: 30%;}
 
-.masonry { /* Masonry container */
+.masonry {
 	float: right;
 	width: 95%;
 	margin-top: 75px;
