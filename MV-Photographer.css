@@ -37,8 +37,9 @@ header {
 	background-color: var(--color15);
 	color: var(--color0);
 	height: 75px !important;
-	position: fixed;
+	position: fixed !important;
 	width: 100% !important;
+	z-index: 1;
 }
 .title {
 	float: left;
