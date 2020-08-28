@@ -7,7 +7,9 @@
 	<title>About MV</title>
 	<link rel="stylesheet" type="text/css" href="MV-Photographer.css">
 	<link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 	</script><script src="js/MV.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body oncontextmenu="return false;">
 <header>
@@ -34,8 +36,8 @@
 </nav>
 </header>
 <div class="laterale">
-	<a href="https://www.instagram.com/marco_vannu/" target="_blank"><small><small><strong>instagram</strong></small></small></a>
-	<a class="open-button" onclick="openForm()"><small><small><strong>contact</strong></small></small></a>
+	<a href="https://www.instagram.com/marco_vannu/" data-aos="fade-down" target="_blank"><small><small><strong>instagram</strong></small></small></a>
+	<a class="open-button" data-aos="fade-down" onclick="openForm()"><small><small><strong>contact</strong></small></small></a>
 </div>
 <div class="form-popup" id="myForm">
   <form name="contact" data-netlify="true" class="form-container" method="POST">
@@ -49,7 +51,7 @@
   </form>
 </div>
 <div class="content">
-		<img src="images/profile.webp" alt="My name is Marco and I am an Italian guy with an interest in photography. For the love of photography and the necessity to shoot something, during the quarantine period caused by COVID-19, I have created this page. I shoot mainly on black & white film.">
+		<img data-aos="fade-in" src="images/profile.webp" alt="My name is Marco and I am an Italian guy with an interest in photography. For the love of photography and the necessity to shoot something, during the quarantine period caused by COVID-19, I have created this page. I shoot mainly on black & white film.">
 <br>
 <br>
 	<h2> "I'm just a curious person that sometimes takes pictures" </h2>
@@ -65,5 +67,11 @@
 	<small><small><small>copyright &#169; 2020</small></small></small>
 </div>
 
+<script>
+	AOS.init({
+	//easing: 'ease-out-back',
+	duration: 1600
+	});
+</script>
 </body>
 </html>
