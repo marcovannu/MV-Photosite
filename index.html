@@ -8,9 +8,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Marco Vannucci Photos Official Site</title>
 	<link rel="stylesheet" type="text/css" href="MV-Photographer.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 	</script><link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
 	<script src="js/MV.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body oncontextmenu="return false;">
 <header>
@@ -50,8 +52,7 @@
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>
-
-<div id="deck" class="masonry">
+<div id="deck" class="masonry" data-aos="fade-up">
 	<div class="item">
 	  <a target="_blank" href="images/camera/4(21).webp">
 		  <img class="asyncImage" src="images/camera/4(21).webp" alt="photos foto bianco nero black white analogue photographer fotografo black&white" onerror="this.style.display='none'"></a>
@@ -296,7 +297,6 @@
 <div class="footer">
 	<small><small><small>copyright &#169; 2020</small></small></small>
 </div>
-
 <script>
 	(() => {
   'use strict';
@@ -324,6 +324,12 @@
 	a[i] = bj;
 	a[j] = bi;
 	} $("#deck").append(a);
+
+
+	AOS.init({
+	//easing: 'ease-out-back',
+	duration: 1500
+	});
 </script>
 </body>
 </html>
