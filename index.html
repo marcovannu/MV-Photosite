@@ -22,7 +22,7 @@
 	<input type="checkbox" id="hamburger"/>
 	<div class="container">
 		<ul>
-		  <li>work
+		  <li>projects
 		    <ul class="sub-nav">
 		    	<li><a href="smartphone.html">smartphone shoot</a></li>
 		    </ul>
@@ -52,7 +52,7 @@
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>
-<div id="deck" class="masonry" data-aos="fade-in">
+<div id="deck" class="masonry" data-aos-delay="200" data-aos="fade">
 	<div class="item">
 	  <a target="_blank" href="images/camera/4(21).webp">
 		  <img class="asyncImage" src="images/camera/4(21).webp" alt="photos foto bianco nero black white analogue photographer fotografo black&white" onerror="this.style.display='none'"></a>
@@ -327,8 +327,9 @@
 
 
 	AOS.init({
-	//easing: 'ease-out-back',
-	duration: 1600
+	easing: 'linear',
+	duration: 1600,
+	once: true,
 	});
 </script>
 </body>
