@@ -25,7 +25,7 @@
 }
 
 body {
-	background-color: var(--color0);
+	background-color: var(--color0) !important;
 	color: var(--color15);
 	font-family: sans-serif;
 	margin: 0;
@@ -236,6 +236,91 @@ header {
 .masonry {
         column-count: 3;
     }
+}
+
+.lb-overlay {
+	width: 0px;
+	height: 0px;
+	position: fixed;
+	overflow: hidden;
+	left: 0px;
+	top: 0px;
+	padding: 0px;
+	z-index: 99;
+	text-align: center;
+	background: var(--color0);
+}
+.lb-overlay img {
+	max-height: 100%;
+	position: relative;
+	opacity: 0;
+	filter: alpha(opacity=0); /* internet explorer */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
+	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+	box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+	-webkit-transition: opacity 0.5s linear;
+	-moz-transition: opacity 0.5s linear;
+	-o-transition: opacity 0.5s linear;
+	-ms-transition: opacity 0.5s linear;
+	transition: opacity 0.5s linear;
+}
+.lb-overlay a.lb-close {
+	z-index: 1001;
+	color: var(--color15);
+	position: absolute;
+	top: 10px;
+	left: 93%;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: center;
+	text-decoration: none;
+	overflow: hidden;
+	opacity: 0;
+}
+.lb-overlay a.lb-close:hover {color: var(--color1);}
+
+.lb-overlay > div {
+	position: relative;
+	color: rgba(27,54,81,0.8);
+	width: 550px;
+	height: 80px;
+	margin: 40px auto 0px auto;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
+}
+.lb-prev, .lb-next {
+	color: var(--color15);
+	text-decoration: none;
+	font-size: 20px;
+	text-align: center;
+	position: absolute;
+	top: -32px;
+	width: 24px;
+	height: 25px;
+	left: 50%;
+}
+.lb-prev:hover, .lb-next:hover {color: var(--color1);}
+.lb-prev {
+	margin-left: -30px;
+}
+.lb-next {
+	margin-left: 6px;
+}
+.lb-overlay:target {
+	width: auto;
+	height: auto;
+	bottom: 0px;
+	right: 0px;
+	padding: 45px 45px 45px 45px;
+}
+.lb-overlay:target img,
+.lb-overlay:target a.lb-close {
+	opacity: 1;
+	filter: alpha(opacity=99); /* internet explorer */
+    	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
+}
+x:-o-prefocus, .lb-overlay img {
+    height: 100%;
 }
 
 .footer {
