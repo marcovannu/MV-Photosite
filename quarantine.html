@@ -12,7 +12,7 @@
 	<script src="js/MV.js"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body oncontextmenu="return false;">
+<body oncontextmenu="return false;" onload="AOS.init()">
 <header data-aos="fade-down" data-aos-duration="900">
 		<a class="logo" href="index.html"><img src="images/logo.webp" alt=""></a>
 		<a class="title"><h1> Ideas </h1></a>
@@ -67,12 +67,5 @@
 <div class="footer">
 	<small><small><small>copyright &#169; 2020</small></small></small>
 </div>
-<script>
-	AOS.init({
-	easing: 'linear',
-	//duration: 1600,
-	once: true,
-	});
-</script>
 </body>
 </html>
