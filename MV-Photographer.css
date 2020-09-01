@@ -27,7 +27,7 @@
 body {
 	background-color: var(--color0) !important;
 	color: var(--color15);
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	margin-top: 0;
 	padding: 0;
@@ -156,7 +156,7 @@ header {
 .form-container input {
 	width: 100%;
 	padding: 15px;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin: 5px 0 22px 0;
 	border: none;
 	background: var(--color0);
@@ -175,7 +175,7 @@ header {
 	background-color: var(--color2);
 	color: white;
 	padding: 16px 20px;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	border: none;
 	cursor: pointer;
 	width: 100%;
@@ -204,6 +204,7 @@ header {
 }
 .content a {text-decoration: var(--color1); color: var(--color1);}
 .content img {float: left; margin: 60px; width: 30%;}
+.content p {font-family: 'Roboto', sans-serif; font-style: italic;}
 
 .tz-gallery {
 	float: right;
