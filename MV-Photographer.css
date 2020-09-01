@@ -205,7 +205,7 @@ header {
 .content a {text-decoration: var(--color1); color: var(--color1);}
 .content img {float: left; margin: 60px; width: 30%;}
 
-.masonry {
+.tz-gallery {
 	float: right;
 	width: 95%;
 	margin-top: 75px;
@@ -222,20 +222,23 @@ header {
 .item img{max-width:100%; height: auto;}
 
 @media only screen and (max-width: 600px) {
-.masonry {
+.tz-gallery {
 	column-count: 1;
     }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 800px){
-.masonry {
+.tz-gallery {
         column-count: 2;
     }
 }
 @media only screen and (min-width: 800px){
-.masonry {
+.tz-gallery {
         column-count: 3;
     }
+}
+.baguetteBox-button {
+    background-color: transparent !important;
 }
 
 .footer {
