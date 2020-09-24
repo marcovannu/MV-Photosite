@@ -237,6 +237,14 @@ header {
 .tz-gallery {
         column-count: 3;
     }
+@media only screen and (min-width: 1000px){
+.tz-gallery {
+        column-count: 4;
+    }
+@media only screen and (min-width: 1200px){
+.tz-gallery {
+        column-count: 5;
+    }
 }
 .baguetteBox-button {
     background-color: transparent !important;
