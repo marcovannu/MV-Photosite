@@ -227,7 +227,6 @@ header {
 	column-count: 1;
     }
 }
-
 @media only screen and (min-width: 600px) and (max-width: 800px){
 .tz-gallery {
         column-count: 2;
@@ -237,10 +236,12 @@ header {
 .tz-gallery {
         column-count: 3;
     }
+}
 @media only screen and (min-width: 1000px){
 .tz-gallery {
         column-count: 4;
     }
+}
 @media only screen and (min-width: 1200px){
 .tz-gallery {
         column-count: 5;
