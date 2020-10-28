@@ -224,7 +224,7 @@ header {
 .nav-btn{
 	position: fixed;
 	height: calc(100vh - 3rem);
-	top: 4.7rem;
+	top: 4.65rem;
 	left: 0;
 	width: 100%;
 	background: var(--color15);
