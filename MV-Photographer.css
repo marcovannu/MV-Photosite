@@ -76,8 +76,9 @@ header {
 
 .nav-links > ul{
 	display: flex;
-	justify-content: right;
-	align-items: right;
+	float: right;
+	justify-content: center;
+	align-items: center;
 }
 
 .nav-link{
