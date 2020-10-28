@@ -251,6 +251,7 @@ header {
 
 .nav-links > ul{
         flex-direction: column;
+	float: left;
 }
 
 .nav-link{
