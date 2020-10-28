@@ -21,7 +21,7 @@
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
@@ -47,77 +47,286 @@ header {
 }
 .logo {
 	float: left;
-	margin: 7px 0 0 15px;
+	margin: 7px 0 0 0;
 	height: 70px;
 }
 
-.container {
-	float: right;
+.container{
+	padding: 0 2rem;
+	margin: 0 auto;
+	display: flex;
+	position: relative;
 }
-#hamnav {
-	width: 100%;
-}
-#hamnav label, #hamburger { display: none; }
+.container li a {text-decoration: none; color: var(--color16);}
+.container ul{list-style: none;}
 
-.container { display: flex; }
-.container ul {
-	margin: auto;
-	list-style: none;
-}
-
-.container ul li {
+.logo-container{
 	float: left;
-	padding: 27px 20px;
-	cursor: pointer;
-	color: var(--color16);
-}
-.container ul li a {text-decoration: none; color: var(--color16);}
-
-.container ul li:hover {
-	color: var(--color0);
-	display: inline;
+	height: 70px;
 }
 
-.container ul li a:hover {color: var(--color0); text-decoration: none;}
+.nav-btn{
+	flex: 3;
+	display: flex;
+}
 
-.container ul li ul.sub-nav {
+.nav-links{
+	flex: 2;
+}
+
+.nav-links > ul{
+	display: flex;
+	justify-content: right;
+	align-items: right;
+}
+
+.nav-link{
+	position: relative;
+}
+
+.nav-link > a{
+	line-height: 3rem;
+	padding: 0 .8rem;
+	letter-spacing: 1px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: .5s;
+}
+
+.nav-link > a > i{
+	margin-left: .2rem;
+}
+
+.nav-link:hover > a{
+	transform: scale(1.1);
+    	color: var(--color0);
+}
+
+.dropdown{
 	position: absolute;
-	background: var(--color15);
-	visibility: hidden;
+	top: 100%;
+	right: 0;
+	width: 15rem;
+	transform: translateY(10px);
 	opacity: 0;
+	pointer-events: none;
+	transition: .5s;
 }
 
-.container ul li ul.sub-nav li {
-	color: var(--color16);
-	padding: 10px 6px 10px 6px;
+.dropdown ul{
+	position: relative;
 }
 
-.container ul li ul.sub-nav li:hover {
-	color: var(--color0);
+.dropdown-link > a{
+	display: flex;
+	background: var(--color15);
+	padding: .5rem 1rem;
+	align-items: center;
+	justify-content: space-between;
+	transition: .3s;
 }
 
-.container ul li:hover ul.sub-nav {
-	visibility: visible;
+.dropdown-link:hover > a{
+    	color: var(--color0);
+}
+
+.dropdown-link:not(:nth-last-child(2)){
+	border-bottom: 1px solid #efefef;
+}
+
+.dropdown-link i{
+	transform: rotate(-90deg);
+}
+
+.dropdown-link{
+	position: relative;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown{
+	transform: translate(0, 0);
 	opacity: 1;
+	pointer-events: auto;
 }
-@media screen and (max-width: 600px){
-  #hamnav label {
-	display: inline-block;
-	float: right;
+
+.hamburger-menu-container{
+	flex: 1;
+	display: none;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.hamburger-menu{
+	width: 2.5rem;
+	height: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.hamburger-menu div{
+	width: 1.6rem;
+	height: 3px;
+	border-radius: 3px;
+	background: var(--color0);
+	position: relative;
+	z-index: 1001;
+	transition: .5s;
+}
+
+.hamburger-menu div:before,
+.hamburger-menu div:after{
+	content: '';
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	 background: var(--color0);
+	border-radius: 3px;
+	transition: .5s;
+}
+
+.hamburger-menu div:before{transform: translateY(-7px);}
+.hamburger-menu div:after{transform: translateY(7px);}
+
+#check{
+	position: absolute;
+	top: 50%;
+	right: 1.5rem;
+	transform: translateY(-50%);
+	width: 2.5rem;
+	height: 2.5rem;
+	z-index: 90000;
+	cursor: pointer;
+	opacity: 0;
+	display: none;
+}
+#check:checked ~ .hamburger-menu-container .hamburger-menu div{background-color: transparent;}
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:before{transform: translateY(0) rotate(-45deg);}
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:after{transform: translateY(0) rotate(45deg);}
+
+@keyframes animation{
+	from{
+		opacity: 0;
+		transform: translateY(15px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media (max-width: 800px){
+.hamburger-menu-container{display: flex;}
+
+#check{display: block;}
+
+.nav-btn{
+	position: fixed;
+	height: calc(100vh - 3rem);
+	top: 4.7rem;
+	left: 0;
+	width: 100%;
+	background: var(--color15);
 	color: var(--color0);
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	overflow-x: hidden;
+	overflow-y: auto;
+	transform: translateX(100%);
+	transition: .65s;
+}
+
+#check:checked ~ .nav-btn{transform: translateX(0);}
+
+#check:checked ~ .nav-btn .nav-link,
+#check:checked ~ .nav-btn {animation: animation .5s ease forwards var(--i);}
+
+.nav-links{
+ 	flex: initial;
+ 	width: 100%;
+ }
+
+.nav-links > ul{
+        flex-direction: column;
+}
+
+.nav-link{
+        width: 100%;
+        opacity: 0;
+        transform: translateY(15px);
+}
+
+.nav-link > a{
+        line-height: 1;
+        padding: 1.6rem 2rem;
+}
+
+.nav-link:hover > a{
+        transform: scale(1);
 	background: var(--color15);
-	padding: 25px;
-  }
-  .container a {
+	color: var(--color0);
+}
+
+.dropdown, .dropdown.second{
+        position: initial;
+        top: initial;
+        left: initial;
+        transform: initial;
+        opacity: 1;
+        pointer-events: auto;
+        width: 100%;
 	background: var(--color15);
-	width: 100%;
-  }
-  .container ul li {
+	color: var(--color0);
+        padding: 0;
+        display: none;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown{display: block;}
+
+.nav-link:hover > a > i,
+.dropdown-link:hover > a > i{transform: rotate(360deg);}
+
+.dropdown-link > a{
 	background: var(--color15);
-	width: 100%;
-  }
-  .container { display: none; }
-	#hamnav input:checked ~ .container { display: block; }
+	color: var(--color0);
+        padding: 1.2rem 2rem;
+        line-height: 1;
+}
+
+.dropdown.second .dropdown-link > a{padding: 1.2rem 2rem 1.2rem 3rem;}
+
+.dropdown.second .dropdown.second .dropdown-link > a{padding: 1.2rem 2rem 1.2rem 4rem;}
+
+.dropdown-link:not(:nth-last-child(2)){border-bottom: none;}
+
+.nav-link:hover .arrow{
+	background: var(--color15);
+	color: var(--color0);
+}
+
+.dropdown .dropdown .arrow{display: none;}
+
+.dropdown-link:hover > a{
+	background: var(--color15);
+	color: var(--color0);
+}
+
+.dropdown-link:first-child:hover ~ .arrow{
+	background: var(--color15);
+	color: var(--color0);
+}
+
+.nav-link > a > i{
+        transform: rotate(-90deg);
+        transition: .7s;
+}
+
+.dropdown i{
+        transition: .7s;
+}
 }
 
 .laterale {
