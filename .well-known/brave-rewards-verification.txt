@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: marcovannucci.it
+Token: ceccab9dbb53bc0dc60fd6588ff89a1db1d2ad205f40960f1970dd7030c63032
