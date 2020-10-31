@@ -349,6 +349,16 @@ header {
 }
 .laterale a:hover {color: var(--color1);}
 
+@media only screen and (max-width: 600px) {
+.laterale a {
+	color: var(--color15);
+	float: left;
+	list-style: none;
+	text-decoration: none;
+	padding: 16px 1px 13px 5px;
+   }
+}
+
 .form-popup {
 	display: none;
 	position: fixed;
