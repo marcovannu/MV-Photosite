@@ -358,6 +358,33 @@ header {
 	padding: 16px 1px 13px 5px;
    }
 }
+@media only screen and (min-width: 800px) and (max-width: 1000px){
+.laterale a {
+	color: var(--color15);
+	float: left;
+	list-style: none;
+	text-decoration: none;
+	padding: 16px 15px 13px 5px;
+   }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1200px){
+.laterale a {
+	color: var(--color15);
+	float: left;
+	list-style: none;
+	text-decoration: none;
+	padding: 16px 19px 13px 5px;
+   }
+}
+@media only screen and (min-width: 1200px){
+.laterale a {
+	color: var(--color15);
+	float: left;
+	list-style: none;
+	text-decoration: none;
+	padding: 16px 3.65% 13px 5px;
+   }
+}
 
 .form-popup {
 	display: none;
