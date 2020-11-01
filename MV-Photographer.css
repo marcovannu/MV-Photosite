@@ -20,9 +20,7 @@
 	--color257: #3c3836;
 }
 
-* {
-	box-sizing: border-box;
-}
+* {box-sizing: border-box;}
 
 body {
 	background-color: var(--color0) !important;
@@ -335,9 +333,7 @@ header {
 	float: left;
 	height: 95vh;
 	position: fixed;
-	text-orientation: mixed;
 	transform: rotate(-180deg);
-	width: 5%;
 	writing-mode: vertical-rl;
 }
 .laterale a {
@@ -345,45 +341,23 @@ header {
 	float: left;
 	list-style: none;
 	text-decoration: none;
-	padding: 16px 12px 13px 3px;
-}
+   }
 .laterale a:hover {color: var(--color1);}
 
 @media only screen and (max-width: 600px) {
-.laterale a {
-	color: var(--color15);
-	float: left;
-	list-style: none;
-	text-decoration: none;
-	padding: 16px 1px 13px 5px;
-   }
+.laterale a {padding: 16px 1px 13px 5px;}
+}
+@media only screen and (min-width: 600px) and (max-width: 800px){
+.laterale a {padding: 16px 12px 13px 3px;}
 }
 @media only screen and (min-width: 800px) and (max-width: 1000px){
-.laterale a {
-	color: var(--color15);
-	float: left;
-	list-style: none;
-	text-decoration: none;
-	padding: 16px 15px 13px 5px;
-   }
+.laterale a {padding: 16px 15px 13px 5px;}
 }
 @media only screen and (min-width: 1000px) and (max-width: 1200px){
-.laterale a {
-	color: var(--color15);
-	float: left;
-	list-style: none;
-	text-decoration: none;
-	padding: 16px 19px 13px 5px;
-   }
+.laterale a {padding: 16px 19px 13px 5px;}
 }
 @media only screen and (min-width: 1200px){
-.laterale a {
-	color: var(--color15);
-	float: left;
-	list-style: none;
-	text-decoration: none;
-	padding: 16px 3.65% 13px 5px;
-   }
+.laterale a {padding: 16px 3.65% 13px 5px;}
 }
 
 .form-popup {
@@ -504,7 +478,6 @@ header {
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	text-orientation: mixed;
 	transform: rotate(-180deg);
 	writing-mode: vertical-rl;
 }
