@@ -431,7 +431,7 @@ header {
 .content img {float: left; margin: 60px; width: 30%;}
 .content p {font-family: 'Roboto', sans-serif; font-style: italic;}
 @media only screen and (max-width: 445px) {
-.content img {text-align: center; width: 60%;}
+.content img {text-align: center; margin: 60px; width: 63.5%;}
 }
 @media only screen and (min-width: 445px) and (max-width: 800px){
 .content img {float: left; margin: 60px; width: 35%;}
