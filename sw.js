@@ -6,7 +6,7 @@ self.addEventListener('fetch', async event => {
   console.log('fetch event')
 });
 
-const cacheName = 'pwa-conf-v1';
+const cacheName = 'v2';
 const staticAssets = [
   './',
   '/index.html',
