@@ -6,7 +6,7 @@ self.addEventListener('fetch', async event => {
   console.log('fetch event')
 });
 
-const cacheName = 'pwa-conf-v1';
+const cacheName = 'v3';
 const staticAssets = [
   './',
   '/index.html',
@@ -46,5 +46,3 @@ async function networkFirst(req) {
     return cachedResponse;
   }
 }
-
-caches.delete(pwa-conf-v1);
