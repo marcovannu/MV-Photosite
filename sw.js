@@ -6,7 +6,7 @@ self.addEventListener('fetch', async event => {
   console.log('fetch event')
 });
 
-const cacheName = 'v2';
+const cacheName = 'v1';
 const staticAssets = [
   './',
   '/index.html',
