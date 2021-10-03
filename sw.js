@@ -6,7 +6,7 @@ self.addEventListener('fetch', async event => {
   console.log('fetch event')
 });
 
-const cacheName = 'v3';
+const cacheName = 'v4';
 const staticAssets = [
   './',
   '/index.html',
@@ -27,6 +27,20 @@ self.addEventListener('fetch', event => {
   } else {
     event.respondWith(cacheFirst(req));
   }
+});
+
+self.addEventListener('activate', (event) => {
+  var cacheKeeplist = ['v4'];
+
+  event.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(keyList.map((key) => {
+        if (cacheKeeplist.indexOf(key) === -1) {
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
 });
 
 async function cacheFirst(req) {
