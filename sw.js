@@ -6,7 +6,7 @@ self.addEventListener('fetch', async event => {
   console.log('fetch event')
 });
 
-const cacheName = 'v4';
+const cacheName = 'v5';
 const staticAssets = [
   './',
   '/index.html',
@@ -30,7 +30,7 @@ self.addEventListener('fetch', event => {
 });
 
 self.addEventListener('activate', (event) => {
-  var cacheKeeplist = ['v4'];
+  var cacheKeeplist = ['v5'];
 
   event.waitUntil(
     caches.keys().then((keyList) => {
